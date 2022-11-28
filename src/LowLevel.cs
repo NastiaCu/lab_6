@@ -9,16 +9,14 @@ namespace c{
         public int salary { get; set;}
         public string status { get; set;}
         
-        public Client client { get; set;}
-        public Orders orders { get; set;}
+        private Client client { get; set;}
+        private Orders orders { get; set;}
        
-        public LowLevel(Client client, Orders orders, string status){
-            this.client = client;
-            this.orders = orders;
+        public LowLevel(string status){
             this.status = status;
         }
 
-        public void qualityCheck(){
+        public void qualityCheck(Client client){
            
             Console.WriteLine("");
             Random rand = new Random();

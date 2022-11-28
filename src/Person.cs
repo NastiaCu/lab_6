@@ -1,7 +1,7 @@
 using System;
 
 namespace c{
-    abstract class Person: Restaurant{
+    abstract class Person{
 
         public int workExperience { get; set; }
         public int grade { get; set; }

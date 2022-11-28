@@ -5,11 +5,6 @@ namespace c{
 
         private Waiter waiter { get; set;}
         private Client client { get; set;}
-
-        public HighLevel(Waiter waiter, Client client){
-            this.waiter = waiter;
-            this.client = client;
-        }
         
         public virtual void whatSalary(LowLevel lowlevel, string status, int rating){
             if (lowlevel.rating == 1){

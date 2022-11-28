@@ -4,13 +4,13 @@ namespace c{
     class Table: ITable{
         public int quality { get; set; }
         private Client client { get; set; }
-
-        public Table(Client client){
+        Random rand = new Random();
+        
+        public void setTable(Client client){
             this.client = client;  
         }
 
         public int table(){
-            Random rand = new Random();
             this.quality = rand.Next(1, 6);
             return  this.quality;
         }

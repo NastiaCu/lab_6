@@ -4,15 +4,13 @@ namespace c{
 
     class Barman: LowLevel{
         private int num_drinks { get; set; }
-        new private Orders orders { get; set; }
-        new private Client client { get; set; }
+        private Orders orders { get; set; }
+        private Client client { get; set; }
         new public string status { get; set; }
         new public int rating = 5;
         new public int salary = 4000;
 
-        public Barman(Client client, Orders orders, string status): base(client, orders, status){
-            this.client = client;
-            this.orders = orders;
+        public Barman(string status): base(status){
             this.status = status;
         }
 
@@ -21,7 +19,7 @@ namespace c{
             Console.WriteLine("ОФИЦИАНТ!!!!!!!!!");
         }
 
-        public void makeDrink(){
+        public void makeDrink(Orders orders){
             KeyValuePair<string, int> BarmanServed = orders.chosenDrink;
 
             Console.WriteLine("");

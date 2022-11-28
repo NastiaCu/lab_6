@@ -11,16 +11,14 @@ namespace c{
         protected int Drink { get; set; }
         public int ToPay { get; set; }
         
-        new private Orders orders { get; set; }
-        new private Client client { get; set; }
+        private Orders orders { get; set; }
+        private Client client { get; set; }
         new public string status { get; set; }
         
         new public int rating = 5;
         new public int salary = 4000;
 
-        public Waiter(Client client, Orders orders, string status): base(client, orders, status){
-            this.client = client;
-            this.orders = orders;
+        public Waiter(string status): base(status){
             this.status = status;
         }
         
@@ -29,7 +27,7 @@ namespace c{
             Console.WriteLine("What would you like to order?");
         }
         
-        public int bill(){
+        public int bill(Orders orders){
 
             KeyValuePair<string, int> MainDish = orders.chosenMain;
             KeyValuePair<string, int> Supplies = orders.chosenSup;

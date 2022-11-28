@@ -6,21 +6,19 @@ namespace c{
         private string main { get; set; }
         private string supplies { get; set; }
        
-        new private Orders orders { get; set; }
-        new private Client client { get; set; }
+        private Orders orders { get; set; }
+        private Client client { get; set; }
         
         new public string status { get; set; }
         new public int rating = 5;
         new protected int salary = 5000;
 
 
-        public Chief(Client client, Orders orders, string status): base(client, orders, status){
-            this.client = client;
-            this.orders = orders;
+        public Chief(string status): base(status){
             this.status = status;
         }
 
-        public void cook(){
+        public void cook(Orders orders){
 
             KeyValuePair<string, int> chiefCookedMain = orders.chosenMain;
             KeyValuePair<string, int> chiefCookedSup = orders.chosenSup;

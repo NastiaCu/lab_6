@@ -4,10 +4,7 @@ namespace c{
     class View: IView{
 
         Menu menu;
-        public void DisplayInfo(Controller controller){
-            Console.WriteLine(controller.Increase());
-        }
-
+       
         public void getVal(Menu menu){
             this.menu = menu;
         }
@@ -17,6 +14,22 @@ namespace c{
             menu.dispMain();
             menu.dispSup();
             menu.dispDrink();
+        }
+
+        public void PrintStatistics(int NumOfClients, int NumOfDays){
+            Console.WriteLine("#########################");
+            Console.WriteLine("Number of clients: " + NumOfClients);
+            Console.WriteLine("In day: " + NumOfDays);
+            Console.WriteLine("#########################");
+        }
+
+        public void PrintAllStatistics(int NumOfClients, int NumOfDays, int stars, int profit){
+            Console.WriteLine("#########################");
+            Console.WriteLine("Number of clients: " + NumOfClients);
+            Console.WriteLine("In day: " + NumOfDays);
+            Console.WriteLine("Number of stars: " + stars);
+            Console.WriteLine("Total profit: " + profit);
+            Console.WriteLine("#########################");
         }
 
     }

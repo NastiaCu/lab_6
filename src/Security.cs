@@ -7,10 +7,6 @@ namespace c{
         private Waiter waiter { get; set; }
         private Client client { get; set; }
 
-        public Security(Waiter waiter, Client client): base(waiter, client){
-            this.waiter = waiter;
-            this.client = client;
-        }
 
         public void goHome(Client client){
             if (client.happiness < -5){
@@ -22,7 +18,7 @@ namespace c{
             }
         }
 
-        public void washDishes(){
+        public void washDishes(Client client){
             if (client.money < 0){
                 Console.WriteLine("Now the client has to wash the dishes ");
                 client.happiness -= 5;

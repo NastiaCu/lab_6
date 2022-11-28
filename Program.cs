@@ -13,9 +13,30 @@ namespace c{
             View view = new View();
             Controller controller = new Controller(view, model);
 
-            view.DisplayInfo(controller);
             controller.CreateMenu(menu);
             view.DisplayMenu(menu);
+
+            int i = 1;
+            model.num = 0;
+            model.Count = 0;
+
+            while (true){
+
+                model.num = 0;
+                model.Count = 0;
+                
+                controller.setClientsNum();
+                controller.setDaysNum(i);
+                
+                controller.updateView();
+                model.setVal();
+                Console.WriteLine();
+                controller.updateViewFinal();
+                i++;
+
+                TimeSpan timeout = new TimeSpan(0, 0, 3);
+                Thread.Sleep(timeout);
+                }
             }
         }
     }
