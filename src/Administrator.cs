@@ -18,11 +18,9 @@ namespace c{
             Console.WriteLine("");
             if (client.happiness <= 2){
                 waiter.grade--;
-                Console.WriteLine("The waiter now has a lower salary(");
             }
             else if (client.happiness > 2){
                 waiter.grade++;
-                Console.WriteLine("Good job!");
             }
         }
 
@@ -34,7 +32,6 @@ namespace c{
             else if (client.happiness <= 5)
                 stars--;
 
-            Console.WriteLine("The rating of the restaurant is " + stars);
         }
 
         public override void whatSalary(LowLevel lowlevel, string status, int rating){

@@ -8,7 +8,7 @@ namespace c{
         
         public int money { get; set;} = 200;
         public int happiness { get; set;} = 2;
-        public int num { get; set;} = 3;
+        public int num { get; set;}
         
 
         public Client(Orders orders){

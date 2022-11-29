@@ -3,11 +3,11 @@ using System;
 namespace c{
 
     class Controller{
-        private IView view { get; set; }
-        private IModel model { get; set; }
+        private View view { get; set; }
+        private Model model { get; set; }
         Menu menu { get; set; }
 
-        public Controller(IView view, IModel model){
+        public Controller(View view, Model model){
             this.view = view;
             this.model = model;
         }

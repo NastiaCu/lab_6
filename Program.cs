@@ -21,6 +21,7 @@ namespace c{
             model.Count = 0;
 
             while (true){
+                Console.ForegroundColor = ConsoleColor.White;
 
                 model.num = 0;
                 model.Count = 0;

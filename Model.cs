@@ -5,10 +5,10 @@ namespace c{
 
         public int j = 5; 
         Menu menu = new Menu();
-        public int NumOfClients { get; set; }
-        public int NumOfDays { get; set; } = 0;
-        public int NumOfTables { get; set; } = 5;
-        public int stars { get; set; }
+        private int NumOfClients { get; set; }
+        private int NumOfDays { get; set; } = 0;
+        private int NumOfTables { get; set; } = 5;
+        private int stars { get; set; }
         
 
         Random rand = new Random();
@@ -54,7 +54,7 @@ namespace c{
         public void setProfit(int Count){
             this.Count = Count;
         }
-        
+
         public void setVal(){
             
             List<Client> clients = new List<Client>();
@@ -72,7 +72,6 @@ namespace c{
 
                 table.setTable(client);
                 
-
                 table.table();
 
                 administrator.setTable(NumOfTables, i);
@@ -120,7 +119,6 @@ namespace c{
                 Console.WriteLine(table.quality);
                 num = administrator.stars;
                 Count += waiter.ToPay;
-
             }
         }
     }

@@ -24,13 +24,15 @@ namespace c{
         }
 
         public void PrintAllStatistics(int NumOfClients, int NumOfDays, int stars, int profit){
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("#########################");
+            Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("Number of clients: " + NumOfClients);
             Console.WriteLine("In day: " + NumOfDays);
             Console.WriteLine("Number of stars: " + stars);
             Console.WriteLine("Total profit: " + profit);
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("#########################");
-        }
-
+        }        
     }
 }

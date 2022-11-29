@@ -13,8 +13,6 @@ namespace c{
         void setStarsNum(int stars);
         void setProfit(int Count);
 
-        
-
         void setVal();
     }
 }

@@ -27,7 +27,7 @@ namespace c{
                 lowlevel.salary += 100;
             }
 
-            Console.WriteLine("The " + status + " got " + lowlevel.salary);
+            //Console.WriteLine("The " + status + " got " + lowlevel.salary);
         } 
         
     }
